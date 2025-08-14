@@ -1,0 +1,66 @@
+.header {
+  background: url('C:\Users\HP\Desktop\organic-web\organic-frontend\public\Header2.jpeg') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  
+  
+}
+
+.header::after {
+  /* dark overlay for text readability */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(Header2.jpeg);
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.header-contents {
+  position: relative; /* ensures text is above overlay */
+  text-align: center;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.header-contents h2 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.header-contents button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #118d34;
+  color: rgb(236, 242, 237);
+  border: none;
+  border-radius: 25px;
+  width: 130px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.header-contents button:hover {
+  background-color: #e85a2f;
+  transform: translateY(-3px);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .header {
+    height: 50vh;
+  }
+  .header-contents h2 {
+    font-size: 1.8rem;
+  }
+}
